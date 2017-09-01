@@ -1,27 +1,30 @@
 # GLScrollViewController
 ####示例:
-把使用了该项目的案例放在这里。可以放APK下载链接，或者简单放几张截图。
-（示例一开始就放出来，方便浏览者一眼就看出是不是想找的东西）
+![img](https://github.com/shuizhuyu1015/GLScrollViewController/blob/master/ScrollViewController/test.gif)
 
-###特性（可选）
+###特性：
+1、采用懒加载的方式布局的滚动视图控制器，滑动减速再进行网络请求；
+2、标题下滑线可根据标题长度自动伸缩；
 
-特性A
+###下载安装：
+下载之后，将 GLScrollViewController 文件夹拖到自己的工程中，在需要引用的页面#import即可。
 
-特性B
-
-###原理说明（可选） 阐述项目是基于什么思路设计的
-
-下载安装
-
-Gradle:
-
-compile 'xxx'
-(说明项目的配置方法，android开源库多用Gradle导入)
-
-###使用方法 怎么使用，有哪些步骤哪些接口。
-
-注意事项
-
-比如混淆方法等
-
-###TODO（可选） 接下来的开发/维护计划。
+###使用方法：
+···
+@interface GLScrollViewController : UIViewController
+//两个数组元素个数要相同
+@property (nonatomic,strong) NSMutableArray *scrollVCArr; //视图控制器数组
+@property (nonatomic,strong) NSMutableArray *titleArr; //标题数组
+@end
+···
+初始化，并传入两个数组即可
+···
+    GLScrollViewController *gvc = [[GLScrollViewController alloc] init];
+    NSArray *arr = @[@"精选",@"焕新衣",@"大V直播",@"品牌订阅",@"视频购",@"问答",@"私人定制清单",@"活动社区",@"生活",@"数码",@"亲子",@"风尚标",@"美食街"];
+    for (int i = 0; i < arr.count; i++) {
+        AViewController *avc = [[AViewController alloc] init];
+        [gvc.scrollVCArr addObject:avc];
+    }
+    gvc.titleArr = [NSMutableArray arrayWithArray:arr];
+    [self.navigationController pushViewController:gvc animated:YES];
+··· 
