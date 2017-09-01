@@ -1,23 +1,23 @@
 # GLScrollViewController
 ###示例:
-===
+---
 
 ![img](https://github.com/shuizhuyu1015/GLScrollViewController/blob/master/ScrollViewController/test.gif)
 
 ###特性：
-====
+---
 
 1、采用懒加载的方式布局的滚动视图控制器，滑动减速再进行网络请求；
 
 2、标题下滑线可根据标题长度自动伸缩；
 
 ###下载安装：
-===
+---
 
 下载之后，将 GLScrollViewController 文件夹拖到自己的工程中，在需要引用的页面#import即可。
 
 ###使用方法：
-===
+---
 
 ```
 @interface GLScrollViewController : UIViewController
