@@ -14,7 +14,7 @@
 ###下载安装：
 -----
 
-下载之后，将 GLScrollViewController 文件夹拖到自己的工程中，在需要引用的页面#import即可。
+下载之后，将 GLScrollViewController 文件夹拖到自己的工程中，在需要引用的页面#import "GLScrollViewController"即可。
 
 ###使用方法：
 -----
